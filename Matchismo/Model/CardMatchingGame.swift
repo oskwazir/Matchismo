@@ -37,7 +37,7 @@ class CardMatchingGame{
         }
     }
     
-    func cardAtIndex(index:Int) -> Card?{
+    func cardAtIndex(index:Int) -> PlayingCard?{
         return index < self._cards.count ? self._cards[index] : nil;
     }
     
