@@ -100,18 +100,6 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WkD-id-KBm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o1-Xu-Apt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" backgroundImage="cardBack">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="238" y="138" width="66" height="86"/>
-                                </variation>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Axh-nE-vJD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK8-q9-Kdp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="cardBack">
@@ -334,6 +322,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o1-Xu-Apt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="238" y="138" width="66" height="86"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Axh-nE-vJD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -345,7 +345,6 @@
                                 <exclude reference="Mpy-8q-0YL"/>
                                 <exclude reference="q7b-Ap-BvC"/>
                                 <exclude reference="xQs-uj-276"/>
-                                <exclude reference="5o1-Xu-Apt"/>
                                 <exclude reference="KK8-q9-Kdp"/>
                                 <exclude reference="98g-nY-LXw"/>
                                 <exclude reference="Ftv-Lf-RBw"/>
@@ -375,6 +374,7 @@
                                 <exclude reference="W5B-CX-ryP"/>
                                 <exclude reference="wmD-um-XeN"/>
                                 <exclude reference="SCH-ER-GZp"/>
+                                <exclude reference="5o1-Xu-Apt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -386,7 +386,6 @@
                                 <include reference="Mpy-8q-0YL"/>
                                 <include reference="q7b-Ap-BvC"/>
                                 <include reference="xQs-uj-276"/>
-                                <include reference="5o1-Xu-Apt"/>
                                 <include reference="KK8-q9-Kdp"/>
                                 <include reference="98g-nY-LXw"/>
                                 <include reference="Ftv-Lf-RBw"/>
@@ -416,6 +415,7 @@
                                 <exclude reference="W5B-CX-ryP"/>
                                 <exclude reference="wmD-um-XeN"/>
                                 <exclude reference="SCH-ER-GZp"/>
+                                <include reference="5o1-Xu-Apt"/>
                             </mask>
                         </variation>
                     </view>
@@ -427,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547.5" y="32"/>
+            <point key="canvasLocation" x="-90" y="-23"/>
         </scene>
     </scenes>
     <resources>

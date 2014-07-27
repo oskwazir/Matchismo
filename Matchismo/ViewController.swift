@@ -10,23 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let playingCardDeck:PlayingCardDeck = PlayingCardDeck()
+    //workaround until outlet collections are supported in Swift
+   
+    @IBOutlet strong var cardButtons: NSArray!
+    
+    private lazy var game:CardMatchingGame = CardMatchingGame(count: self.cardButtons.count, deck: self.createDeck())
+    
+    func createDeck() -> PlayingCardDeck {
+        return PlayingCardDeck()
+    }
     
     @IBAction func touchCardButton(sender: UIButton) {
-        
-        // Need to safely unwrap this because no text in currentTitle is a nil value
-        
-        if sender.currentTitle {
-            sender.setBackgroundImage(UIImage(named: "cardBack"), forState: UIControlState.Normal)
-            sender.setTitle(nil, forState: UIControlState.Normal)
-        } else {
-            //a nil will be returned if the deck is finished
-            if let card = playingCardDeck.drawRandomCard(){
-                sender.setBackgroundImage(UIImage(named: "cardFront"), forState: UIControlState.Normal)
-                sender.setTitle(card.content, forState: UIControlState.Normal)
-            }
+      //  let chosenButtonIndex = self.cardButtons.indexOfObject(sender)
+        self.updateUI()
+    }
+    
+    private func updateUI(){
+        for index in 0..<self.cardButtons.count {
+            let cardButton = self.cardButtons[index] as UIButton
+            let cardButtonIndex = self.cardButtons.indexOfObject(cardButton)
+            let card = self.game.cardAtIndex(cardButtonIndex)
+            cardButton.setTitle(self.titleForCard(card!), forState: UIControlState.Normal)
+            cardButton.setBackgroundImage(self.backgroundImageForCard(card!), forState: UIControlState.Normal)
+            cardButton.enabled = !card?.matched
         }
     }
+    
+    private func titleForCard(card:Card)->String{
+        return card.chosen ? card.content : ""
+    }
+    
+    private func backgroundImageForCard(card:Card) -> UIImage{
+        return UIImage(named: card.chosen ? "cardFront" : "cardBack")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

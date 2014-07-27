@@ -10,9 +10,9 @@ import Foundation
 
 class PlayingCard:Card{
     
-    let suit:String?
+    public let suit:String?
     
-    let rank:Int?
+    public let rank:Int?
     
     // validSuits and rankStrings are type properties.
     // No need for individual instances to dupe these properties
@@ -22,6 +22,23 @@ class PlayingCard:Card{
     
     public class var rankStrings:[String] {
         return ["?","A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+    }
+    
+    func matchOtherCards(otherCards: [PlayingCard]) -> (Int) {
+        var score = 0
+        
+        //we only match one card for now
+        if otherCards.count == 1 {
+            let otherCard = otherCards[0]
+            if otherCard.rank == self.rank {
+                score = 4
+            } else if otherCard.suit == self.suit {
+                score = 1
+            }
+        
+        }
+        
+        return score
     }
     
     init(suit:String,rank:Int){
