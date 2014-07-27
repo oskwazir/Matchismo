@@ -12,6 +12,10 @@
 		B729A1F41984C3DB00E2C574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729A1F21984C3DB00E2C574 /* Main.storyboard */; };
 		B729A1F61984C3DB00E2C574 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B729A1F51984C3DB00E2C574 /* Images.xcassets */; };
 		B729A2021984C3DB00E2C574 /* MatchismoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729A2011984C3DB00E2C574 /* MatchismoTests.swift */; };
+		B7A985211984ECBB00340AB5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A9851F1984ECBB00340AB5 /* Card.swift */; };
+		B7A985221984ECBB00340AB5 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A985201984ECBB00340AB5 /* Deck.swift */; };
+		B7A985251984ED5800340AB5 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A985231984ED5800340AB5 /* PlayingCard.swift */; };
+		B7A985261984ED5800340AB5 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A985241984ED5800340AB5 /* PlayingCardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		B729A1FB1984C3DB00E2C574 /* MatchismoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchismoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B729A2001984C3DB00E2C574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B729A2011984C3DB00E2C574 /* MatchismoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchismoTests.swift; sourceTree = "<group>"; };
+		B7A9851F1984ECBB00340AB5 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B7A985201984ECBB00340AB5 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		B7A985231984ED5800340AB5 /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
+		B7A985241984ED5800340AB5 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		B729A1EB1984C3DB00E2C574 /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
+				B7A9851E1984ECBB00340AB5 /* Model */,
 				B729A1EE1984C3DB00E2C574 /* AppDelegate.swift */,
 				B729A1F01984C3DB00E2C574 /* ViewController.swift */,
 				B729A1F21984C3DB00E2C574 /* Main.storyboard */,
@@ -107,6 +116,17 @@
 				B729A2001984C3DB00E2C574 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7A9851E1984ECBB00340AB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7A985231984ED5800340AB5 /* PlayingCard.swift */,
+				B7A985241984ED5800340AB5 /* PlayingCardDeck.swift */,
+				B7A9851F1984ECBB00340AB5 /* Card.swift */,
+				B7A985201984ECBB00340AB5 /* Deck.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A985251984ED5800340AB5 /* PlayingCard.swift in Sources */,
+				B7A985221984ECBB00340AB5 /* Deck.swift in Sources */,
 				B729A1F11984C3DB00E2C574 /* ViewController.swift in Sources */,
+				B7A985261984ED5800340AB5 /* PlayingCardDeck.swift in Sources */,
+				B7A985211984ECBB00340AB5 /* Card.swift in Sources */,
 				B729A1EF1984C3DB00E2C574 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +419,7 @@
 				B729A2071984C3DB00E2C574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B729A2081984C3DB00E2C574 /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +428,7 @@
 				B729A20A1984C3DB00E2C574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
