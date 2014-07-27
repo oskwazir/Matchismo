@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     //workaround until outlet collections are supported in Swift
-   
+    
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet strong var cardButtons: NSArray!
     
     private lazy var game:CardMatchingGame = CardMatchingGame(count: self.cardButtons.count, deck: self.createDeck())
@@ -21,7 +22,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchCardButton(sender: UIButton) {
-      //  let chosenButtonIndex = self.cardButtons.indexOfObject(sender)
+        let chosenButtonIndex = self.cardButtons.indexOfObject(sender)
+        self.game.chooseCardAtIndex(chosenButtonIndex)
         self.updateUI()
     }
     
@@ -32,7 +34,11 @@ class ViewController: UIViewController {
             let card = self.game.cardAtIndex(cardButtonIndex)
             cardButton.setTitle(self.titleForCard(card!), forState: UIControlState.Normal)
             cardButton.setBackgroundImage(self.backgroundImageForCard(card!), forState: UIControlState.Normal)
-            cardButton.enabled = !card?.matched
+            
+            //IMPLEMENT
+            //cardButton.enabled = false if card is matched
+            
+            self.scoreLabel.text = "Score:\(self.game.score)"
         }
     }
     
